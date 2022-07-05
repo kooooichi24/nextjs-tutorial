@@ -2,15 +2,15 @@ import BlogInfo from "../molecules/blogInfo";
 import Card from "../molecules/card";
 
 type Props = {
-  blogsInfo: any;
+  blogs: any;
 };
 
 const BlogList = (props: Props) => {
-  const { blogsInfo } = props;
+  const { blogs } = props;
 
   return (
     <>
-      {blogsInfo.map((blog, i) => (
+      {blogs.map((blog, i) => (
         <div key={i}>
           <BlogInfo
             postedAt={blog.postedAt}

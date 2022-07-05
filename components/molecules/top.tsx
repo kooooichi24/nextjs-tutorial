@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Heading from "../atoms/heading";
 import Select from "../atoms/select";
 
@@ -8,20 +9,19 @@ type Option = {
 
 type Props = {
   options: Option[];
-  defaultValue?: Option["value"];
-  onChange: Function;
 };
 
 const Top = (props: Props) => {
-  const { options, defaultValue, onChange } = props;
+  const { options } = props;
+  const [selectedOption, setSelectedOption] = useState(options[0].value);
 
   return (
     <div>
       <Heading level={1}>Post</Heading>
       <div>
         <Select
-          defaultValue={defaultValue}
-          onChange={onChange}
+          defaultValue={selectedOption}
+          onChange={setSelectedOption}
           options={options}
         ></Select>
       </div>

@@ -1,15 +1,16 @@
 import Anchor from "../atoms/anchor";
 import Heading from "../atoms/heading";
+import { Blog } from "../../types/index";
 
 type Props = {
-  blogInfos: any;
+  blogs: Blog[];
 };
 
 const CategoryList = (props: Props) => {
-  const { blogInfos } = props;
+  const { blogs } = props;
 
   const categories = () => {
-    const obj = blogInfos.map((b) => {
+    const obj = blogs.map((b) => {
       return {
         category: b.tagName,
         url: b.tagUrl,
