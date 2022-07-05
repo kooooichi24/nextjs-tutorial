@@ -1,14 +1,13 @@
-import Card from "../components/molecules/card";
 import Top from "../components/molecules/top";
 import { useState } from "react";
 import Copyright from "../components/molecules/copyright";
 import Nav from "../components/molecules/nav";
-import BlogInfo from "../components/molecules/blogInfo";
 import Pagination from "../components/molecules/pagination";
-import AuthorsList from "../components/molecules/authorsList";
-import CategoryList from "../components/molecules/categoryList";
-import RecentBlog from "../components/molecules/recentBlog";
-import Footer from "../components/molecules/footer";
+import AuthorList from "../components/organisms/authorList";
+import CategoryList from "../components/organisms/categoryList";
+import RecentBlog from "../components/organisms/recentBlog";
+import Footer from "../components/organisms/footer";
+import BlogList from "../components/organisms/blogList";
 
 const options = [
   {
@@ -21,7 +20,7 @@ const options = [
   },
 ];
 
-const blogInfos = [
+const blogsInfo = [
   {
     title: "Build Your New Idea with Laravel Freamwork.",
     titleUrl: "#",
@@ -137,7 +136,7 @@ export default function Home() {
   const [selectedOption, setSelectedOption] = useState(options[0].value);
 
   const getRecentBlog = () => {
-    const sorted = blogInfos.sort((a, b) => a.postedAt > b.postedAt);
+    const sorted = blogsInfo.sort((a, b) => a.postedAt > b.postedAt);
     return sorted[0];
   };
 
@@ -151,26 +150,10 @@ export default function Home() {
         options={options}
       ></Top>
       selectedOption: {selectedOption}
-      {blogInfos.map((blog, i) => (
-        <div key={i}>
-          <BlogInfo
-            postedAt={blog.postedAt}
-            tagName={blog.tagName}
-            tagUrl={blog.tagUrl}
-            blogTitle={blog.title}
-            blogAbstract={blog.abstract}
-            blogUrl={blog.blogUrl}
-          ></BlogInfo>
-          <Card
-            href={blog.blogUrl}
-            src={blog.authorImage}
-            name={blog.blogAuthor}
-          ></Card>
-        </div>
-      ))}
-      <Pagination total={blogInfos.length}></Pagination>
-      <AuthorsList blogInfos={blogInfos}></AuthorsList>
-      <CategoryList blogInfos={blogInfos}></CategoryList>
+      <BlogList blogsInfo={blogsInfo}></BlogList>
+      <Pagination total={blogsInfo.length}></Pagination>
+      <AuthorList blogInfos={blogsInfo}></AuthorList>
+      <CategoryList blogInfos={blogsInfo}></CategoryList>
       <RecentBlog
         postedAt={getRecentBlog().postedAt}
         tagName={getRecentBlog().tagName}

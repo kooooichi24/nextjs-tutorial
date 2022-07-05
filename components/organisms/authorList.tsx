@@ -1,11 +1,11 @@
 import Heading from "../atoms/heading";
-import AuthorInfo from "./authorInfo";
+import AuthorInfo from "../molecules/authorInfo";
 
 type Props = {
   blogInfos: any;
 };
 
-const AuthorsList = (props: Props) => {
+const AuthorList = (props: Props) => {
   const { blogInfos } = props;
 
   const countPostsByAuthor = (blogInfos) => {
@@ -47,4 +47,4 @@ const AuthorsList = (props: Props) => {
   );
 };
 
-export default AuthorsList;
+export default AuthorList;
