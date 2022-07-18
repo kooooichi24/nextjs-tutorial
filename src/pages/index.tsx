@@ -1,6 +1,6 @@
 import IndexTemplate from "../components/templates/index/index";
 import { Blog } from "../types/index";
-import json from "../data/data.json";
+import json from "../../data/data.json";
 
 const blogs: Blog[] = json.data;
 
