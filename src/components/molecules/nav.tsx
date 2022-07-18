@@ -21,10 +21,6 @@ const Nav = () => {
           <Anchor href="#">About us</Anchor>
         </div>
       </div>
-      This a Blog Page by khatabwedaa.&nbsp;
-      <Anchor href="https://tailwindcomponents.com/component/blog-page">
-        Component details
-      </Anchor>
     </nav>
   );
 };
