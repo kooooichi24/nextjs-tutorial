@@ -3,7 +3,7 @@ import DateArea from "../atoms/dateArea";
 import Heading from "../atoms/heading";
 
 type Props = {
-  postedAt: Date;
+  postedAt: string;
   tagName: string;
   tagUrl: string;
   blogTitle: string;

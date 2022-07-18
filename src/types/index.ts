@@ -14,7 +14,7 @@ export type Blog = {
   titleUrl: string;
   abstract: string;
   blogUrl: string;
-  postedAt: Date;
+  postedAt: string;
   tagName: string;
   tagUrl: string;
   blogAuthor: string;

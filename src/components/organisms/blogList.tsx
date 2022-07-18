@@ -1,4 +1,4 @@
-import { Blog } from "../../src/types";
+import { Blog } from "../../../src/types";
 import BlogInfo from "../molecules/blogInfo";
 import Card from "../molecules/card";
 
