@@ -20,7 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/atoms/heading.js",
-    "pages/index.tsx"
+    "src/pages/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

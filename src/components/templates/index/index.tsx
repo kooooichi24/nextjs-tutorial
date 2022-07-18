@@ -7,7 +7,7 @@ import CategoryList from "../../../components/organisms/categoryList";
 import RecentBlog from "../../../components/organisms/recentBlog";
 import Footer from "../../../components/organisms/footer";
 import BlogList from "../../../components/organisms/blogList";
-import { Blog } from "../../../types/index";
+import { Blog } from "../../../../src/types/index";
 
 type Props = {
   blogs: Blog[];
