@@ -1,6 +1,6 @@
 import Anchor from "../atoms/anchor";
 import Heading from "../atoms/heading";
-import { Blog } from "../../types/index";
+import { Blog } from "../../src/types/index";
 
 type Props = {
   blogs: Blog[];
