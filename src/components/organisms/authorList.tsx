@@ -1,6 +1,6 @@
 import Heading from "../atoms/heading";
 import AuthorInfo from "../molecules/authorInfo";
-import { Blog } from "../../src/types/index";
+import { Blog } from "../../../src/types/index";
 
 type Props = {
   blogs: Blog[];
