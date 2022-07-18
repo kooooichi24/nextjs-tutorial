@@ -13,7 +13,7 @@ const Card = (props: Props) => {
   return (
     <div>
       <Anchor href={href}>
-        <img src={src} alt="avatart"></img>
+        <img src={src} alt="avatar"></img>
         <Heading level={1}>{name}</Heading>
       </Anchor>
     </div>

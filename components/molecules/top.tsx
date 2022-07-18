@@ -7,12 +7,18 @@ type Option = {
   value: string;
 };
 
-type Props = {
-  options: Option[];
-};
+const options: Option[] = [
+  {
+    label: "Latest",
+    value: "Latest",
+  },
+  {
+    label: "Last Week",
+    value: "Last Week",
+  },
+];
 
-const Top = (props: Props) => {
-  const { options } = props;
+const Top = () => {
   const [selectedOption, setSelectedOption] = useState(options[0].value);
 
   return (
@@ -23,7 +29,7 @@ const Top = (props: Props) => {
           defaultValue={selectedOption}
           onChange={setSelectedOption}
           options={options}
-        ></Select>
+        />
       </div>
     </div>
   );

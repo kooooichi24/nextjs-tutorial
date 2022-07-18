@@ -7,23 +7,21 @@ import CategoryList from "../../../components/organisms/categoryList";
 import RecentBlog from "../../../components/organisms/recentBlog";
 import Footer from "../../../components/organisms/footer";
 import BlogList from "../../../components/organisms/blogList";
-import { Option, Brand, Blog } from "../../../types/index";
+import { Blog } from "../../../types/index";
 
 type Props = {
   blogs: Blog[];
-  options: Option[];
-  brands: Brand[];
   recentBlog: Blog;
 };
 
 const IndexTemplate = (props: Props) => {
-  const { blogs, options, brands, recentBlog } = props;
+  const { blogs, recentBlog } = props;
 
   return (
     <>
       <Copyright />
       <Nav />
-      <Top options={options} />
+      <Top />
       <BlogList blogs={blogs} />
       <Pagination total={blogs.length} />
       <AuthorList blogs={blogs} />
@@ -37,7 +35,7 @@ const IndexTemplate = (props: Props) => {
         author={recentBlog.blogAuthor}
         authorImage={recentBlog.authorImage}
       />
-      <Footer brands={brands} />
+      <Footer />
     </>
   );
 };
