@@ -19,7 +19,7 @@ const Select = (props: Props) => {
   return (
     <select defaultValue={defaultValue} onChange={handleChange}>
       {options.map((option) => (
-        <option key={option.value} value={option.value}>
+        <option key={option.label.toString()} value={option.value}>
           {option.label}
         </option>
       ))}

@@ -1,8 +1,9 @@
+import { Blog } from "../../types";
 import BlogInfo from "../molecules/blogInfo";
 import Card from "../molecules/card";
 
 type Props = {
-  blogs: any;
+  blogs: Blog[];
 };
 
 const BlogList = (props: Props) => {

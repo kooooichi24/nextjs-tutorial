@@ -28,7 +28,7 @@ const RecentBlog = (props: Props) => {
         </div>
         <div>
           <div>
-            <img src={authorImage} alt="avatart"></img>
+            <img src={authorImage} alt="avatar"></img>
             <Anchor href="#">{author}</Anchor>
           </div>
           <DateArea date={postedAt}></DateArea>&nbsp;
