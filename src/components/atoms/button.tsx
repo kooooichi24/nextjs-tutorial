@@ -8,13 +8,14 @@ type Props = {
   type: "button" | "reset" | "submit";
   children: React.ReactNode;
   disabled: boolean;
+  className?: string;
 };
 
 const Button = (props: Props) => {
-  const { type, children, disabled } = props;
+  const { type, children, disabled, className } = props;
 
   return (
-    <button type={type} disabled={disabled}>
+    <button className={className} type={type} disabled={disabled}>
       {children}
     </button>
   );

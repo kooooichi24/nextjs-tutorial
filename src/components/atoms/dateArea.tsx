@@ -1,9 +1,10 @@
 type Props = {
   date: string;
+  className?: string;
 };
 
 const DateArea = (props: Props) => {
-  const { date } = props;
+  const { date, className } = props;
 
   // TODO: formatもオブションで変更できると良い
   const formatDate = (date: string) => {
@@ -14,7 +15,7 @@ const DateArea = (props: Props) => {
     return month + " " + converted.getDay() + ", " + converted.getFullYear();
   };
 
-  return <span>{formatDate(date)}</span>;
+  return <span className={className}>{formatDate(date)}</span>;
 };
 
 export default DateArea;

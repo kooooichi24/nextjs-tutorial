@@ -2,9 +2,12 @@ import Anchor from "../atoms/anchor";
 
 const Copyright = () => {
   return (
-    <div>
+    <div className="">
       This a Blog Page by khatabwedaa.&nbsp;
-      <Anchor href="https://tailwindcomponents.com/component/blog-page">
+      <Anchor
+        className="text-gray-200 underline"
+        href="https://tailwindcomponents.com/component/blog-page"
+      >
         Component details
       </Anchor>
     </div>

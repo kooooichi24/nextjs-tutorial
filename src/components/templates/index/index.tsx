@@ -19,23 +19,36 @@ const IndexTemplate = (props: Props) => {
 
   return (
     <>
-      <Copyright />
-      <Nav />
-      <Top />
-      <BlogList blogs={blogs} />
-      <Pagination total={blogs.length} />
-      <AuthorList blogs={blogs} />
-      <CategoryList blogs={blogs} />
-      <RecentBlog
-        postedAt={recentBlog.postedAt}
-        tagName={recentBlog.tagName}
-        tagUrl={recentBlog.tagUrl}
-        blogTitle={recentBlog.title}
-        blogUrl={recentBlog.blogUrl}
-        author={recentBlog.blogAuthor}
-        authorImage={recentBlog.authorImage}
-      />
-      <Footer />
+      <div className="left-0 right-0 z-40 px-4 py-3 text-center text-white bg-gray-800">
+        <Copyright />
+      </div>
+      <div className="overflow-x-hidden bg-gray-100">
+        <Nav className="px-6 py-4 bg-white shadow" />
+        <div className="px-6 py-8">
+          <div className="container flex justify-between mx-auto">
+            <div className="w-full lg:w-8/12">
+              <Top className="flex items-center justify-between" />
+              <BlogList blogs={blogs} />
+              <Pagination total={blogs.length} />
+            </div>
+            <div className="hidden w-4/12 -mx-8 lg:block">
+              <AuthorList className="px-8" blogs={blogs} />
+              <CategoryList className="px-8 mt-10" blogs={blogs} />
+              <RecentBlog
+                className="px-8 mt-10"
+                postedAt={recentBlog.postedAt}
+                tagName={recentBlog.tagName}
+                tagUrl={recentBlog.tagUrl}
+                blogTitle={recentBlog.title}
+                blogUrl={recentBlog.blogUrl}
+                author={recentBlog.blogAuthor}
+                authorImage={recentBlog.authorImage}
+              />
+            </div>
+          </div>
+        </div>
+        <Footer className="px-6 py-2 text-gray-100 bg-gray-800" />
+      </div>
     </>
   );
 };

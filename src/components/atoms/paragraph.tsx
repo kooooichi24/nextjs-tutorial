@@ -1,11 +1,12 @@
 type Props = {
   children: React.ReactNode;
+  className?: string;
 };
 
 const Paragraph = (props: Props) => {
-  const { children } = props;
+  const { children, className } = props;
 
-  return <p>{children}</p>;
+  return <p className={className}>{children}</p>;
 };
 
 export default Paragraph;

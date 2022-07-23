@@ -4,6 +4,7 @@ import { Blog } from "../../../src/types/index";
 
 type Props = {
   blogs: Blog[];
+  className?: string;
 };
 
 type PostsPerAuthor = {
@@ -32,26 +33,34 @@ const countPostsByAuthor = (blogInfos) => {
 };
 
 const AuthorList = (props: Props) => {
-  const { blogs } = props;
+  const { blogs, className } = props;
   const countPerAuthor: PostsPerAuthor[] = countPostsByAuthor(blogs);
 
-  return (
-    <>
-      <Heading level={1}>Authors</Heading>
+  const style = (i: number) => {
+    return i === 0 ? "flex items-center" : "flex items-center mt-6";
+  };
 
-      <ul>
-        {countPerAuthor.map((d, i) => (
-          <li key={i}>
-            <AuthorInfo
-              imageUrl={d.imageUrl}
-              authorUrl={d.authorUrl}
-              name={d.author}
-              posts={d.count}
-            ></AuthorInfo>
-          </li>
-        ))}
-      </ul>
-    </>
+  return (
+    <div className={className}>
+      <Heading className="mb-4 text-xl font-bold text-gray-700" level={1}>
+        Authors
+      </Heading>
+
+      <div className="flex flex-col max-w-sm px-6 py-4 mx-auto bg-white rounded-lg shadow-md">
+        <ul className="-mx-4">
+          {countPerAuthor.map((d, i) => (
+            <li className={style(i)} key={i}>
+              <AuthorInfo
+                imageUrl={d.imageUrl}
+                authorUrl={d.authorUrl}
+                name={d.author}
+                posts={d.count}
+              ></AuthorInfo>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
