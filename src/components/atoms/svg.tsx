@@ -1,12 +1,17 @@
 type Props = {
   viewBox: string;
   children: React.ReactNode;
+  className?: string;
 };
 
 const Svg = (props: Props) => {
-  const { viewBox, children } = props;
+  const { viewBox, children, className } = props;
 
-  return <svg viewBox={viewBox}>{children}</svg>;
+  return (
+    <svg className={className} viewBox={viewBox}>
+      {children}
+    </svg>
+  );
 };
 
 export default Svg;

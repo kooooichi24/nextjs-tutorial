@@ -12,9 +12,15 @@ const Card = (props: Props) => {
 
   return (
     <div>
-      <Anchor href={href}>
-        <img src={src} alt="avatar"></img>
-        <Heading level={1}>{name}</Heading>
+      <Anchor className="flex items-center" href={href}>
+        <img
+          className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
+          src={src}
+          alt="avatar"
+        ></img>
+        <Heading className="font-bold text-gray-700 hover:underline" level={1}>
+          {name}
+        </Heading>
       </Anchor>
     </div>
   );

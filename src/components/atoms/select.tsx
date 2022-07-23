@@ -7,17 +7,22 @@ type Props = {
   options: Option[];
   defaultValue?: Option["value"];
   onChange: Function;
+  className?: string;
 };
 
 const Select = (props: Props) => {
-  const { options, defaultValue, onChange } = props;
+  const { options, defaultValue, onChange, className } = props;
   const handleChange = (e) => {
     console.log("handle change");
     onChange(e.target.value);
   };
 
   return (
-    <select defaultValue={defaultValue} onChange={handleChange}>
+    <select
+      className={className}
+      defaultValue={defaultValue}
+      onChange={handleChange}
+    >
       {options.map((option) => (
         <option key={option.label.toString()} value={option.value}>
           {option.label}

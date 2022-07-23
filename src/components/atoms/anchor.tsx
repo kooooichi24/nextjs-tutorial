@@ -3,13 +3,14 @@ type Props = {
   target?: React.HTMLAttributeAnchorTarget;
   rel?: string;
   children: React.ReactNode;
+  className?: string;
 };
 
 const Anchor = (props: Props) => {
-  const { href, target, rel, children } = props;
+  const { href, target, rel, children, className } = props;
 
   return (
-    <a href={href} target={target} rel={rel}>
+    <a className={className} href={href} target={target} rel={rel}>
       {children}
     </a>
   );

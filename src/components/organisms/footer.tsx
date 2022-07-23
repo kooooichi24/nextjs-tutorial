@@ -9,6 +9,10 @@ type Brand = {
   brandUrl: string;
 };
 
+type Props = {
+  className: string;
+};
+
 const brands: Brand[] = [
   {
     viewBox: "0 0 512 512",
@@ -27,18 +31,26 @@ const brands: Brand[] = [
   },
 ];
 
-const Top = () => {
+const Footer = (props: Props) => {
+  const { className } = props;
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <div>
-        <Anchor href="#">Brand</Anchor>
-        <Paragraph>All rights reserved {currentYear}.</Paragraph>
-        <div>
+    <footer className={className}>
+      <div className="container flex flex-col items-center justify-between mx-auto md:flex-row">
+        <Anchor className="text-2xl font-bold" href="#">
+          Brand
+        </Anchor>
+        <Paragraph className="mt-2 md:mt-0">
+          All rights reserved {currentYear}.
+        </Paragraph>
+        <div className="flex mt-4 mb-2 -mx-2 md:mt-0 md:mb-0">
           {brands.map((b) => (
-            <Anchor href={b.brandUrl}>
-              <Svg viewBox={b.viewBox}>
+            <Anchor
+              className="mx-2 text-gray-100 hover:text-gray-400"
+              href={b.brandUrl}
+            >
+              <Svg className="w-4 h-4 fill-current" viewBox={b.viewBox}>
                 <Path d={b.d}></Path>
               </Svg>
             </Anchor>
@@ -49,4 +61,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default Footer;

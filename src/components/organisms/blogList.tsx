@@ -12,20 +12,22 @@ const BlogList = (props: Props) => {
   return (
     <>
       {blogs.map((blog, i) => (
-        <div key={i}>
-          <BlogInfo
-            postedAt={blog.postedAt}
-            tagName={blog.tagName}
-            tagUrl={blog.tagUrl}
-            blogTitle={blog.title}
-            blogAbstract={blog.abstract}
-            blogUrl={blog.blogUrl}
-          ></BlogInfo>
-          <Card
-            href={blog.blogUrl}
-            src={blog.authorImage}
-            name={blog.blogAuthor}
-          ></Card>
+        <div className="mt-6" key={i}>
+          <div className="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+            <BlogInfo
+              postedAt={blog.postedAt}
+              tagName={blog.tagName}
+              tagUrl={blog.tagUrl}
+              blogTitle={blog.title}
+              blogAbstract={blog.abstract}
+              blogUrl={blog.blogUrl}
+            ></BlogInfo>
+            <Card
+              href={blog.blogUrl}
+              src={blog.authorImage}
+              name={blog.blogAuthor}
+            ></Card>
+          </div>
         </div>
       ))}
     </>
