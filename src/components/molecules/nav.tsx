@@ -1,5 +1,5 @@
 import Anchor from "../atoms/anchor";
-import Button, { ButtonColor, ButtonSize, ButtonType } from "../atoms/button";
+import { Button } from "../atoms/Button/button";
 import Path from "../atoms/path";
 import Svg from "../atoms/svg";
 
@@ -24,9 +24,8 @@ const Nav = (props: Props) => {
           </div>
           <div>
             <Button
-              color={ButtonColor.BLUE}
-              type={ButtonType.BUTTON}
-              size={ButtonSize.MEDIUM}
+              color="blue"
+              size="medium"
               className="block text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none md:hidden"
             >
               <Svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
