@@ -45,10 +45,11 @@ const Footer = (props: Props) => {
           All rights reserved {currentYear}.
         </Paragraph>
         <div className="flex mt-4 mb-2 -mx-2 md:mt-0 md:mb-0">
-          {brands.map((b) => (
+          {brands.map((b, i) => (
             <Anchor
               className="mx-2 text-gray-100 hover:text-gray-400"
               href={b.brandUrl}
+              key={`brand-${i}`}
             >
               <Svg className="w-4 h-4 fill-current" viewBox={b.viewBox}>
                 <Path d={b.d}></Path>

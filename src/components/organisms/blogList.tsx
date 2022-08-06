@@ -10,9 +10,9 @@ const BlogList = (props: Props) => {
   const { blogs } = props;
 
   return (
-    <>
+    <div>
       {blogs.map((blog, i) => (
-        <div className="mt-6" key={i}>
+        <div className="mt-6" key={`blog-${i}`}>
           <div className="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
             <BlogInfo
               postedAt={blog.postedAt}
@@ -30,7 +30,7 @@ const BlogList = (props: Props) => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
