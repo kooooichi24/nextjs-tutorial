@@ -13,8 +13,8 @@ const sizeMap: Record<Props["size"], string> = {
 };
 
 const backgroundMap: Record<Props["color"], string> = {
-  red: "bg-red-500 hover:bg-red-500",
-  blue: "bg-blue-500 hover:bg-blue-500",
+  red: "bg-red-500 hover:bg-red-700",
+  blue: "bg-blue-500 hover:bg-blue-700",
 };
 
 export const Button = ({
