@@ -1,4 +1,4 @@
-export type ButtonProps = {
+export type Props = {
   label: string;
   color?: "red" | "blue";
   size?: "small" | "medium" | "large";
@@ -6,13 +6,13 @@ export type ButtonProps = {
   onClick?: () => void;
 };
 
-const sizeMap: Record<ButtonProps["size"], string> = {
+const sizeMap: Record<Props["size"], string> = {
   small: "py-2 px-3",
   medium: "py-3 px-5",
   large: "py-4 px-6",
 };
 
-const backgroundMap: Record<ButtonProps["color"], string> = {
+const backgroundMap: Record<Props["color"], string> = {
   red: "bg-red-500 hover:bg-red-500",
   blue: "bg-blue-500 hover:bg-blue-500",
 };
@@ -22,7 +22,7 @@ export const Button = ({
   color = "blue",
   size = "medium",
   disabled = false,
-}: ButtonProps) => {
+}: Props) => {
   return (
     <button
       className={[

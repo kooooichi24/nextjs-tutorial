@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button, ButtonProps } from "./Button";
+import { Button, Props } from "./Button";
 
 export default {
   title: "Atoms/Button",
@@ -14,14 +14,14 @@ ApllyButton.args = {
   label: "応募する",
   color: "blue",
   size: "medium",
-} as ButtonProps;
+} as Props;
 
 export const DeleteButton = Template.bind({});
 DeleteButton.args = {
   label: "削除する",
   color: "red",
   size: "small",
-} as ButtonProps;
+} as Props;
 
 export const DeleteDisabledButton = Template.bind({});
 DeleteDisabledButton.args = {
@@ -29,4 +29,4 @@ DeleteDisabledButton.args = {
   color: "red",
   size: "small",
   disabled: true,
-} as ButtonProps;
+} as Props;

@@ -1,7 +1,7 @@
 import Path from "../path";
 import Svg from "../svg";
 
-type Props = {
+export type Props = {
   size?: "small" | "medium" | "large";
   onClick?: () => void;
   className?: string;
