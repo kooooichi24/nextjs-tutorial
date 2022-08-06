@@ -1,7 +1,5 @@
 import Anchor from "../atoms/anchor";
-import { Button } from "../atoms/Button/button";
-import Path from "../atoms/path";
-import Svg from "../atoms/svg";
+import { HumbugerButton } from "../atoms/HumbugerButton/HumbugerButton";
 
 type Props = {
   className: string;
@@ -23,15 +21,10 @@ const Nav = (props: Props) => {
             </Anchor>
           </div>
           <div>
-            <Button
-              color="blue"
+            <HumbugerButton
               size="medium"
               className="block text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none md:hidden"
-            >
-              <Svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                <Path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-              </Svg>
-            </Button>
+            />
           </div>
         </div>
         <div className="flex-col hidden md:flex md:flex-row md:-mx-4">
