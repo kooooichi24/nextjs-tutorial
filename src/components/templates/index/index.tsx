@@ -8,7 +8,6 @@ import RecentBlog from "../../../components/organisms/recentBlog";
 import Footer from "../../../components/organisms/footer";
 import BlogList from "../../../components/organisms/blogList";
 import { Blog } from "../../../../src/types/index";
-import { Button } from "../../atoms/Button/Button";
 
 type Props = {
   blogs: Blog[];
@@ -20,7 +19,6 @@ const IndexTemplate = (props: Props) => {
 
   return (
     <>
-      <Button label="Button" color="blue" />
       <div className="left-0 right-0 z-40 px-4 py-3 text-center text-white bg-gray-800">
         <Copyright />
       </div>
