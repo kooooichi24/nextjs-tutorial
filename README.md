@@ -3,8 +3,13 @@
 ## Usage
 
 ```sh
-$ git clone https://github.com/kooooichi24/nextjs-todo-app.git
-$ cd nextjs-todo-app
+$ git clone https://github.com/kooooichi24/nextjs-tutorial.git
+$ cd nextjs-tutorial
 $ npm install
-$ npm run dev:mock
+$ npm run dev
+```
+
+```sh
+# start storybook
+$ npm run sb
 ```
